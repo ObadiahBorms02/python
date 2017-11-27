@@ -1,0 +1,68 @@
+Equal to (==)
+Not equal to (!=)
+Less than (<)
+Less than or equal to (<=)
+Greater than (>)
+Greater than or equal to (>=)
+____________________________
+1 < 2 and 2 < 3 is True;
+1 < 2 and 2 > 3 is False
+____________________________
+1 < 2 or 2 > 3 is True;
+1 > 2 or 2 > 3 is False
+____________________________
+not False will evaluate to True, while not 41 > 40 will return False.
+_________________________________________________________________________
+True or not False and False. not gets evaluated first, 
+so we have True or True and False. and goes next, 
+so we get True or False. As we've seen, 
+True or False is True, 
+so the value finally returned is True
+___________________________________________________________
+variable_name = raw_input('Prompt')
+_____________________________________
+empty_string = ""
+if len(empty_string) > 0:
+  # Run this block.
+  # Maybe print something?
+else:
+  # That string must have been empty.
+  ______________________________________
+  def shout(phrase):
+  if phrase == phrase.upper():
+    return "YOU'RE SHOUTING!"
+  else:
+    return "Can you speak up?"
+
+shout("I'M INTERESTED IN SHOUTING")
+________________________________________
+def bigger(first, second):
+  print max(first, second)
+  return True
+  ______________________________________
+  def wages(hours):
+  # If I make $8.35/hour...
+  return 8.35 * hours
+  ______________________________________
+  def finish_game(score):
+  tickets = 10 * score
+  if score >= 10:
+    tickets += 50
+  elif score >= 7:
+    tickets += 20
+  return tickets
+  _______________________________________
+  def double(n):
+  return 2 * n
+
+def triple(p):
+  return 3 * p
+
+def add(a, b):
+  return double(a) + triple(b)
+  ______________________________________
+  list_name = [item_1, item_2]
+  ______________________________________
+  beatles = ["john","paul","george","ringo","stuart"]
+beatles.remove("stuart")
+________________________________________________________
