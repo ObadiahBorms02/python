@@ -1,68 +1,182 @@
-Equal to (==)
-Not equal to (!=)
-Less than (<)
-Less than or equal to (<=)
-Greater than (>)
-Greater than or equal to (>=)
+  Equal to (==)
+  Not equal to (!=)
+  Less than (<)
+  Less than or equal to (<=)
+  Greater than (>)
+  Greater than or equal to (>=)
 ____________________________
-1 < 2 and 2 < 3 is True;
-1 < 2 and 2 > 3 is False
+
+  1 < 2 and 2 < 3 is True;
+  1 < 2 and 2 > 3 is False
 ____________________________
-1 < 2 or 2 > 3 is True;
-1 > 2 or 2 > 3 is False
+
+  1 < 2 or 2 > 3 is True;
+  1 > 2 or 2 > 3 is False
 ____________________________
-not False will evaluate to True, while not 41 > 40 will return False.
+
+  not False will evaluate to True, while not 41 > 40 will return False.
 _________________________________________________________________________
-True or not False and False. not gets evaluated first, 
-so we have True or True and False. and goes next, 
-so we get True or False. As we've seen, 
-True or False is True, 
-so the value finally returned is True
+
+  True or not False and False. not gets evaluated first, 
+  so we have True or True and False. and goes next, 
+  so we get True or False. As we've seen, 
+  True or False is True, 
+  so the value finally returned is True
 ___________________________________________________________
-variable_name = raw_input('Prompt')
+
+  variable_name = raw_input('Prompt')
 _____________________________________
-empty_string = ""
-if len(empty_string) > 0:
-  # Run this block.
-  # Maybe print something?
-else:
-  # That string must have been empty.
-  ______________________________________
-  def shout(phrase):
-  if phrase == phrase.upper():
-    return "YOU'RE SHOUTING!"
+  empty_string = ""
+  
+  if len(empty_string) > 0:
+    # Run this block.
+    # Maybe print something?
   else:
-    return "Can you speak up?"
+    # That string must have been empty.
+______________________________________
 
-shout("I'M INTERESTED IN SHOUTING")
+    def shout(phrase):
+    if phrase == phrase.upper():
+      return "YOU'RE SHOUTING!"
+    else:
+      return "Can you speak up?"
+
+  shout("I'M INTERESTED IN SHOUTING")
 ________________________________________
-def bigger(first, second):
-  print max(first, second)
-  return True
-  ______________________________________
-  def wages(hours):
-  # If I make $8.35/hour...
-  return 8.35 * hours
-  ______________________________________
-  def finish_game(score):
-  tickets = 10 * score
-  if score >= 10:
-    tickets += 50
-  elif score >= 7:
-    tickets += 20
-  return tickets
-  _______________________________________
-  def double(n):
-  return 2 * n
 
-def triple(p):
-  return 3 * p
+  def bigger(first, second):
+    print max(first, second)
+    return True
+______________________________________
 
-def add(a, b):
-  return double(a) + triple(b)
-  ______________________________________
-  list_name = [item_1, item_2]
-  ______________________________________
-  beatles = ["john","paul","george","ringo","stuart"]
-beatles.remove("stuart")
+    def wages(hours):
+    # If I make $8.35/hour...
+    return 8.35 * hours
+______________________________________
+
+    def finish_game(score):
+    tickets = 10 * score
+    if score >= 10:
+      tickets += 50
+    elif score >= 7:
+      tickets += 20
+    return tickets
+_______________________________________
+
+    def double(n):
+    return 2 * n
+
+  def triple(p):
+    return 3 * p
+
+  def add(a, b):
+    return double(a) + triple(b)
+______________________________________
+
+    list_name = [item_1, item_2]
+______________________________________
+
+    beatles = ["john","paul","george","ringo","stuart"]
+  beatles.remove("stuart")
 ________________________________________________________
+
+  Method 1 - for item in list:
+  for item in list:
+    print item
+
+  Method 2 - iterate through indexes:
+  for i in range(len(list)):
+    print list[i]
+_____________________________________________
+
+    n = [3, 5, 7]
+
+  def total(numbers):
+    result = 0
+    for i in range(0,len(numbers)):
+      result += numbers[i]
+    return result
+___________________________________________
+  
+    for item in list:
+    print item
+
+  for i in range(len(list)):
+    print list[i]
+_____________________________________
+ 
+    n = ["Michael", "Lieberman"]
+  # Add your function here
+
+  def join_strings(words):
+    result = ""
+    for word in words:
+      result += word
+    return result
+
+  print join_strings(n)
+_____________________________________
+  a = [1, 2, 3]
+  b = [4, 5, 6]
+  print a + b
+  # prints [1, 2, 3, 4, 5, 6]
+______________________________________
+
+  def join_lists(x, y):
+	  return x + y
+
+
+  print join_lists(m, n)
+________________________________________
+ 
+ list_of_lists = [[1, 2, 3], [4, 5, 6]]
+
+  for lst in list_of_lists:
+   for item in lst:
+      print item
+__________________________________________
+
+  def flatten(lists):
+    results = []
+    for numbers in lists:
+      for number in numbers:
+        results.append(number)
+    return results
+
+  print flatten(n)
+__________________________________________
+
+board = []
+for i in range(5):
+  board.append(['O'] * 5)
+def print_board(board_in):
+  for row in board:
+    print " ".join(row)
+    
+def random_row(board):
+  return randint(0, len(board) - 1)for turn in range(4):
+  print "Turn", turn + 1 
+    
+def random_col(board):
+  return randint(0, len(board) - 1)
+
+random_row(board)
+random_col(board)
+guess_row = int(raw_input("Guess Row: "))
+guess_col = int(raw_input("Guess Col: "))
+
+if guess_row == ship_row and guess_col == ship_col:
+  print "Congratulations! You sank my battleship!"   
+else:
+  if guess_row not in range(5) or \
+    guess_col not in range(5):
+    print "Oops, that's not even in the ocean."
+  elif (board[guess_row][guess_col] == 'X'):
+    print "You guessed that one already."
+  else:
+    print "You missed my battleship!"
+    board[guess_row][guess_col] = "X"
+    if (turn == 3):
+      print "Game Over"
+  print "Turn", turn + 1 
+  print_board(board)
