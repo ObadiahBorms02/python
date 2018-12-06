@@ -1,3 +1,4 @@
+#dont move while code is running 
 from mcpi.minecraft import Minecraft
 from mcpi import block
 
